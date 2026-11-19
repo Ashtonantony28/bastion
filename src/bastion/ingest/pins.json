@@ -1,0 +1,222 @@
+{
+  "fdic/failures.csv": {
+    "bytes": 428363,
+    "sha256": "04a1d550378a3a158e929a9e2106e08964ebb4a580abf18bc1d5ef31a4c19036",
+    "url": "https://api.fdic.gov/banks/failures"
+  },
+  "fdic/financials/all_banks_20221231.csv": {
+    "bytes": 1518698,
+    "sha256": "696a0e40a0177fef5b722e0eef7fdb5e4a38a4311eaea76301dc962046df02e8",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20221231"
+  },
+  "fdic/financials/case_study.csv": {
+    "bytes": 86772,
+    "sha256": "1af07b4d0fd88945429c08b8172f2e2db4749d19079e085d7003dcf340f31590",
+    "url": "https://api.fdic.gov/banks/financials?CERT:(588 OR 983 OR 2270 OR 6560 OR 6672 OR 17534 OR 24045 OR 24735 OR 57053 OR 57512 OR 57957 OR 59017) AND REPDTE:[20191231 TO 20231231]"
+  },
+  "fed_scenarios/2025/baseline_domestic.csv": {
+    "bytes": 1750,
+    "sha256": "166cb76f1140bebd3301e1a3c946b8e1803d6f6e6f6f7a71a361d99b8ad3c6b5",
+    "url": "https://www.federalreserve.gov/supervisionreg/files/2025-Table_2A_Supervisory_Baseline_Domestic.csv"
+  },
+  "fed_scenarios/2025/historic_domestic.csv": {
+    "bytes": 17269,
+    "sha256": "c5259f13b4aeda29492ab050794524ec2b44ec366e09948670f41802d7e80f35",
+    "url": "https://www.federalreserve.gov/supervisionreg/files/2025-Table_1A_Historic_Domestic.csv"
+  },
+  "fed_scenarios/2025/severely_adverse_domestic.csv": {
+    "bytes": 1873,
+    "sha256": "76262fd8407e0c6bfbbc3ac6d890f921c11e946e404c89092de9d81e1ff34390",
+    "url": "https://www.federalreserve.gov/supervisionreg/files/2025-Table_3A_Supervisory_Severely_Adverse_Domestic.csv"
+  },
+  "fed_scenarios/2026/baseline_domestic.csv": {
+    "bytes": 1692,
+    "sha256": "76e236695be2c8372890078acf8c01273ba5198a19afb5037045a963737c1bcc",
+    "url": "https://www.federalreserve.gov/supervisionreg/files/2026_Final_Supervisory_Baseline_Domestic.csv"
+  },
+  "fed_scenarios/2026/historic_domestic.csv": {
+    "bytes": 16936,
+    "sha256": "6d08aadcf82d65dcf36b856792040b82ceceef79a46ff0239afd41e0c4e7f653",
+    "url": "https://www.federalreserve.gov/supervisionreg/files/2026_Final_Historic_Domestic.csv"
+  },
+  "fed_scenarios/2026/severely_adverse_domestic.csv": {
+    "bytes": 1824,
+    "sha256": "45c2859ae7246c071b69df8623854751f0629b04393957e14fe28bc33c04ebbb",
+    "url": "https://www.federalreserve.gov/supervisionreg/files/2026_Final_Supervisory_Severely_Adverse_Domestic.csv"
+  },
+  "fred/BAMLC0A4CBBB.csv": {
+    "bytes": 8978,
+    "sha256": "44df0f93ddff4f0d6fa45d626eb841685f3223087e43271f32e43d948a657174",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLC0A4CBBB&cosd=1990-01-01&coed=2025-12-31"
+  },
+  "fred/CORSFRMACBS.csv": {
+    "bytes": 2285,
+    "sha256": "3bb5fb5d2a4ca51f171f7a39077551102bfc7336cdcf9e41881cdf35cb24bda0",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CORSFRMACBS&cosd=1990-01-01&coed=2025-12-31"
+  },
+  "fred/CPIAUCSL.csv": {
+    "bytes": 8227,
+    "sha256": "21e15e837e58c153a59752f3e58101e003db21e7db6a7112d45d257f2ccf3d0e",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL&cosd=1990-01-01&coed=2025-12-31"
+  },
+  "fred/CSUSHPINSA.csv": {
+    "bytes": 8116,
+    "sha256": "7a0449ee24199b6c74187a1500a8e160f81334bf707ddf15eabd20e9f0d37312",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CSUSHPINSA&cosd=1990-01-01&coed=2025-12-31"
+  },
+  "fred/DGS10.csv": {
+    "bytes": 148747,
+    "sha256": "ff78f5b08615377d554a338317bd1cccc7af4b423b1c9949215ef2fa40ce8b1f",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=1990-01-01&coed=2025-12-31"
+  },
+  "fred/DGS3MO.csv": {
+    "bytes": 148748,
+    "sha256": "32099b40d9f53f4c12358612940fea7d92a3f07a0232d9348ac4fff087bb7500",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS3MO&cosd=1990-01-01&coed=2025-12-31"
+  },
+  "fred/DGS5.csv": {
+    "bytes": 148746,
+    "sha256": "808b8d8e192096c8f7a98195627edefb5df8297f2a69ca44d4817e06b4fe2cac",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=1990-01-01&coed=2025-12-31"
+  },
+  "fred/DRCCLACBS.csv": {
+    "bytes": 2267,
+    "sha256": "35a6157d4f0ccd2eb9a4312d038bad9ec0886a28328eac2185136a8881ed62e4",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DRCCLACBS&cosd=1990-01-01&coed=2025-12-31"
+  },
+  "fred/DRSFRMACBS.csv": {
+    "bytes": 2281,
+    "sha256": "be8384548e8a6b00c8bb400a4e48a94b49e6d45c978fd25b1be1532e7724e4f9",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DRSFRMACBS&cosd=1990-01-01&coed=2025-12-31"
+  },
+  "fred/FEDFUNDS.csv": {
+    "bytes": 6938,
+    "sha256": "7dd6c4a5d4c5d405ab2ee85957621ea4f10e400a8ab2e13e19a8eecbb211b4c4",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=FEDFUNDS&cosd=1990-01-01&coed=2025-12-31"
+  },
+  "fred/GDPC1.csv": {
+    "bytes": 3045,
+    "sha256": "3f7dfe1ab03b36dce893cce69b056eb65363b0b352c08181909708db440b1830",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GDPC1&cosd=1990-01-01&coed=2025-12-31"
+  },
+  "fred/MORTGAGE30US.csv": {
+    "bytes": 30134,
+    "sha256": "b12d9c94ad1ac3180776b490165c3a2785b354f569033e3f670db665cab0a8d5",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=MORTGAGE30US&cosd=1990-01-01&coed=2025-12-31"
+  },
+  "fred/UNRATE.csv": {
+    "bytes": 6506,
+    "sha256": "d1574bd50b7a9699549ebf0ed63400d51f6941f2dc4a82772a1121dda933597d",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE&cosd=1990-01-01&coed=2025-12-31"
+  },
+  "fred/VIXCLS.csv": {
+    "bytes": 158120,
+    "sha256": "7987c310dbbdd6a039ffbca413b231dbcd40c82b6d2da836470b7613b0b2ab92",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS&cosd=1990-01-01&coed=2025-12-31"
+  },
+  "treasury/par_curve_2005.csv": {
+    "bytes": 15326,
+    "sha256": "ecf2ab3d1ca1b6ee8e916fee90474028c2d1221b8d236131621ad58020db0552",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2005/all"
+  },
+  "treasury/par_curve_2006.csv": {
+    "bytes": 16480,
+    "sha256": "cdbdcd8b32735caa453e00280232ff70c7012c055b7daf7b8cf1d9aaa8c66bfe",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2006/all"
+  },
+  "treasury/par_curve_2007.csv": {
+    "bytes": 16650,
+    "sha256": "297f6be4059a605b1ec0f266eb7b8467c3d40504a0dd53341746223276e6e6d8",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2007/all"
+  },
+  "treasury/par_curve_2008.csv": {
+    "bytes": 16638,
+    "sha256": "686db01584dd45f67addc243ee0c42339d491171a0e947c8f88ecac78ee0e9ea",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2008/all"
+  },
+  "treasury/par_curve_2009.csv": {
+    "bytes": 16584,
+    "sha256": "3c9294cfa71136e1d5330b09a00bf996ecf86c865d593d7ee954d11984a5bdb1",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2009/all"
+  },
+  "treasury/par_curve_2010.csv": {
+    "bytes": 16672,
+    "sha256": "f973bd3988989d3e408655cbc7fed89faefbaa8a1c111ec313241fb47fc75e2d",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2010/all"
+  },
+  "treasury/par_curve_2011.csv": {
+    "bytes": 16584,
+    "sha256": "224eaf29d6fe7cbccc746c7a8c845f189cf91424bab43f46ca386a74e98d81f7",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2011/all"
+  },
+  "treasury/par_curve_2012.csv": {
+    "bytes": 16584,
+    "sha256": "9c889b6e3cb87f40f3760bddb69f05f7525800ac480ef5712b2cf318765fa184",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2012/all"
+  },
+  "treasury/par_curve_2013.csv": {
+    "bytes": 16584,
+    "sha256": "1e1a98426d9274afcc68467962f9238104db775b8765e48f45ac7488b33ff338",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2013/all"
+  },
+  "treasury/par_curve_2014.csv": {
+    "bytes": 16584,
+    "sha256": "8d560698e03e4c0d8d22ff8be7f5f7c5c0d472b1e33a22b6a75373a57e84aa0f",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2014/all"
+  },
+  "treasury/par_curve_2015.csv": {
+    "bytes": 16650,
+    "sha256": "b7665d1ce46d6ed6d08fbda34aae1831de38e274e3c7caed81904042aac9b5bc",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2015/all"
+  },
+  "treasury/par_curve_2016.csv": {
+    "bytes": 16584,
+    "sha256": "b4d0a8d86e2734bc64d84d9a9824434d841737621582daeac58f13c7129f325c",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2016/all"
+  },
+  "treasury/par_curve_2017.csv": {
+    "bytes": 16584,
+    "sha256": "56074da7c32103a28cf4ba2bdf5eaa12f98fd49852047aef1a6eb16e64bd6e83",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2017/all"
+  },
+  "treasury/par_curve_2018.csv": {
+    "bytes": 16978,
+    "sha256": "e8375524a7a8d3e8091bbe7690d0378b9365be09efff5b18b8eefddc25f718d3",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2018/all"
+  },
+  "treasury/par_curve_2019.csv": {
+    "bytes": 17841,
+    "sha256": "83fc47c17325e222c45fd3a1eb26c69ae01f62d33b793030b4b8b350ca0a290b",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2019/all"
+  },
+  "treasury/par_curve_2020.csv": {
+    "bytes": 17912,
+    "sha256": "edcf1c8be9622f3cd92eb7de1847aefc3977e2118e2ff9af67f46614a5c306a7",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2020/all"
+  },
+  "treasury/par_curve_2021.csv": {
+    "bytes": 17912,
+    "sha256": "1be57e49c63a99f6002431a1030c8fbe539b71066c3eaf14f9f58ddc34492cea",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2021/all"
+  },
+  "treasury/par_curve_2022.csv": {
+    "bytes": 18226,
+    "sha256": "c33cb2758e5e34c2c23b7ab759d18681091860f3f9e5960112859f64f31cd814",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2022/all"
+  },
+  "treasury/par_curve_2023.csv": {
+    "bytes": 19098,
+    "sha256": "edb7f3904e11dcaa502cdcc03ad9b1b16c893802d166ce9bc5fa1118251249d4",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2023/all"
+  },
+  "treasury/par_curve_2024.csv": {
+    "bytes": 19098,
+    "sha256": "6775840b76cd7fd41121f61d6f6c60184eca6b2ba49954ec7372c463cbeef34d",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2024/all"
+  },
+  "treasury/par_curve_2025.csv": {
+    "bytes": 20155,
+    "sha256": "cf2fa3da7f160384b63d2ead698532b1d76cd9f789ce4911e2304db85b14e6d5",
+    "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2025/all"
+  }
+}

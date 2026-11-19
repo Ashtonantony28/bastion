@@ -1,0 +1,11 @@
+bastion:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('BASTION_DUCKDB_PATH') }}"
+      threads: 4
+    ci:
+      type: duckdb
+      path: "{{ env_var('BASTION_DUCKDB_PATH') }}"
+      threads: 4
