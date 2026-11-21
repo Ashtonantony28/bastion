@@ -1,5 +1,5 @@
 # Report targets regenerate every number in docs/results from the lakehouse ($BASTION_DATA).
-.PHONY: test ci-build report-m6 report-m7 report-svb report-ews report-m4
+.PHONY: test ci-build report-m6 report-m7 report-svb report-ews report-m4 report-m5
 
 test:
 	pytest -q && bastion fixtures --check
@@ -21,3 +21,6 @@ report-m6:
 
 report-m4:
 	bastion report market
+
+report-m5:
+	bastion report ccr

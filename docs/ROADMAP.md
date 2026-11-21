@@ -9,7 +9,7 @@ Full milestone definitions and Verify commands: [PLAN.md §6](PLAN.md).
 | M2 | LGD, EAD, lifetime PD | |
 | M3 | IFRS 9 + CECL + IRB capital + portfolio credit VaR | |
 | M4 | Market risk (VaR, ES, sVaR, backtesting) | **done** ([results](results/m4-market-risk.md)) |
-| M5 | Counterparty risk (EE/PFE, CVA, SA-CCR) | |
+| M5 | Counterparty risk (EE/PFE, CVA, SA-CCR) | **done** ([results](results/m5-counterparty-risk.md), ADR 0008) |
 | M6 | Liquidity, ALM, IRRBB | **done** ([results](results/m6-alm-liquidity.md), ADR 0007) |
 | M7 | SVB case study + bank early-warning model | **done** ([SVB](results/m7-svb-case-study.md), [EWS](results/m7-early-warning.md)) |
 | M8 | Stress testing | after M3 + M6 |

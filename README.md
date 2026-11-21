@@ -8,7 +8,7 @@ analytics, a CCAR-style stress test, and an SR 11-7-style model risk management 
 > Research and portfolio project. Not a production risk system, not a regulatory submission,
 > not investment or credit advice. No real customer data is used.
 
-**Status:** M0 (data platform), M4 (market risk), M6 (ALM, IRRBB, liquidity) and M7 (SVB case study, bank early-warning model) complete. See [docs/ROADMAP.md](docs/ROADMAP.md) and the full
+**Status:** M0 (data platform), M4 (market risk), M5 (counterparty risk), M6 (ALM, IRRBB, liquidity) and M7 (SVB case study, bank early-warning model) complete. See [docs/ROADMAP.md](docs/ROADMAP.md) and the full
 [plan](docs/PLAN.md).
 
 ## Quick start
@@ -57,6 +57,18 @@ index options) fully revalued on open daily data (Ken French, FRED, Treasury cur
   Kupiec and Christoffersen; filtered HS had 35 and passes both. In 2008 HS was in the red zone
   with 20 exceptions; FHS had 1.
 - Report: [docs/results/m4-market-risk.md](docs/results/m4-market-risk.md) (`make report-m4`).
+
+## M5 highlights
+
+A five-swap netting set with a Baa-rated corporate is simulated under one-factor Hull-White fitted
+to the 2025-12-31 Treasury curve.
+
+- Netting cuts peak EE from $15.0m to $11.0m; a $5m-threshold CSA brings peak PFE from $31.4m to
+  $7.1m and CVA from $1.50m to $0.70m.
+- SA-CCR EAD is 1.32x (unmargined) and 1.21x (margined) the IMM-style 1.4 x EEPE.
+- Swap pricer and swaption engine match QuantLib to 1e-8; Monte Carlo EE matches the analytic
+  Jamshidian profile within MC error; SA-CCR reproduces BCBS 279 Example 1 (EAD 569).
+- Report: [docs/results/m5-counterparty-risk.md](docs/results/m5-counterparty-risk.md) (`make report-m5`).
 
 ## M6 highlights
 

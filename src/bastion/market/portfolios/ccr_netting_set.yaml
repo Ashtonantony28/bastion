@@ -1,0 +1,17 @@
+# Synthetic OTC netting set with one corporate counterparty (USD, semi-annual both legs).
+# Seasoned trades: fixed rates are the rates struck at inception, so today's values are non-zero.
+# Times are years from the valuation date; payer = pay fixed, receive floating.
+name: bastion-ccr-netting-set-v1
+counterparty:
+  name: Baa-rated corporate client
+  recovery: 0.40
+  spread_source: Moody's Baa yield minus 10y Treasury (FRED BAA10Y) at the valuation date
+csa:
+  threshold: 5000000
+  mpor_days: 10
+swaps:
+  - {name: payer_10y, notional: 100000000, fixed_rate: 0.0350, start: 0.0, end: 10.0, payer: true}
+  - {name: receiver_5y, notional: 150000000, fixed_rate: 0.0425, start: 0.0, end: 5.0, payer: false}
+  - {name: payer_2y, notional: 75000000, fixed_rate: 0.0325, start: 0.0, end: 2.0, payer: true}
+  - {name: receiver_2y7y_fwd, notional: 50000000, fixed_rate: 0.0400, start: 2.0, end: 7.0, payer: false}
+  - {name: payer_30y, notional: 25000000, fixed_rate: 0.0450, start: 0.0, end: 30.0, payer: true}
