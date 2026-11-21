@@ -16,7 +16,7 @@ from pathlib import Path
 
 import numpy as np
 
-from bastion.ingest.fdic import FAILURE_FIELDS, FINANCIAL_FIELDS, INSTITUTION_FIELDS
+from bastion.ingest.fdic import ALM_FIELDS, FAILURE_FIELDS, FINANCIAL_FIELDS, INSTITUTION_FIELDS
 from bastion.ingest.fred import SERIES
 
 SEED = 20261119
@@ -179,6 +179,66 @@ def _bank_quarter(
     return [v[f] for f in FINANCIAL_FIELDS]
 
 
+def _alm_row(
+    rng: np.random.Generator, cert: int, repdte: str, size: float, stress: float
+) -> list[object]:
+    """Synthetic ALM row: securities buckets sum exactly to SC; deposit mix sums to DEP."""
+    asset = int(size)
+    sc = int(asset * (0.25 + 0.2 * stress))
+    long_w = 0.2 + 0.6 * stress  # stressed bank holds long securities
+    w = np.array([0.05, 0.05, 0.15, 0.15, 0.3 * long_w + 0.1, 0.4 * long_w])
+    w = w / w.sum()
+    nm = (w * sc * 0.4).astype(int)
+    pt = (w * sc * 0.5).astype(int)
+    o_short = int(sc * 0.03)
+    o_long = sc - int(nm.sum()) - int(pt.sum()) - o_short
+    loans = int(asset * 0.5)
+    lr = (np.array([0.05, 0.05, 0.1, 0.1, 0.3, 0.4]) * loans * 0.4).astype(int)
+    lo = (np.array([0.5, 0.1, 0.1, 0.1, 0.1, 0.1]) * loans * 0.6).astype(int)
+    eqtot = int(asset * 0.09)
+    liab = asset - eqtot
+    dep = int(liab * 0.88)
+    cds = [int(dep * f) for f in (0.02, 0.03, 0.01, 0.0)]
+    cdl = [int(dep * f) for f in (0.01, 0.01, 0.0, 0.0)]
+    unins = int(dep * (0.35 + 0.5 * stress))
+    trn = int(dep * 0.2)
+    mmda = dep - trn - sum(cds) - sum(cdl)
+    v: dict[str, object] = {"CERT": cert, "REPDTE": repdte}
+    for f, x in zip(
+        ["SCNM3LES", "SCNM3T12", "SCNM1T3", "SCNM3T5", "SCNM5T15", "SCNMOV15"], nm, strict=True
+    ):
+        v[f] = int(x)
+    for f, x in zip(
+        ["SCPT3LES", "SCPT3T12", "SCPT1T3", "SCPT3T5", "SCPT5T15", "SCPTOV15"], pt, strict=True
+    ):
+        v[f] = int(x)
+    v.update({"SCO3YLES": o_short, "SCOOV3Y": o_long})
+    for f, x in zip(
+        ["LNRS3LES", "LNRS3T12", "LNRS1T3", "LNRS3T5", "LNRS5T15", "LNRSOV15"], lr, strict=True
+    ):
+        v[f] = int(x)
+    for f, x in zip(
+        ["LNOT3LES", "LNOT3T12", "LNOT1T3", "LNOT3T5", "LNOT5T15", "LNOTOV15"], lo, strict=True
+    ):
+        v[f] = int(x)
+    v.update(dict(zip(["CD3LESS", "CD3T12S", "CD1T3S", "CDOV3S"], cds, strict=True)))
+    v.update(dict(zip(["CD3LES", "CD3T12", "CD1T3", "CDOV3"], cdl, strict=True)))
+    v.update({
+        "DEP": dep, "DEPNI": int(dep * 0.3), "DEPI": dep - int(dep * 0.3), "TRN": trn, "NTRSMMDA": mmda,
+        "NTRSOTH": 0, "NTRTIME": sum(cds) + sum(cdl), "DEPINS": dep - unins, "DEPUNA": unins, "BRO": 0,
+        "FREPP": int(liab * 0.01), "OTBFH1L": int(liab * 0.03), "OTBFH1T3": int(liab * 0.01), "OTBFH3T5": 0,
+        "OTBFHOV5": 0, "OTBOT1L": 0, "OTBOT1T3": 0, "OTBOT3T5": 0, "OTBOTOV5": 0,
+        "ASSET": asset, "LIAB": liab, "EQTOT": eqtot, "RBCT1J": int(eqtot * 0.95), "CHBAL": int(asset * 0.06),
+        "SC": sc, "SCUST": int(sc * 0.2), "SCGNM": int(sc * 0.1), "SCMUNI": int(sc * 0.05),
+        "SCAF": int(sc * 0.4 * (1 - 0.1 * stress)), "SCAA": int(sc * 0.4), "SCHA": int(sc * 0.6),
+        "SCHF": int(sc * 0.6 * (1 - 0.15 * stress)), "SCPLEDGE": int(sc * 0.3), "LNPLEDGE": int(loans * 0.05),
+        "LNLSGR": loans, "LNRERES": int(loans * 0.4), "EDEP": int(dep * 0.004), "EINTEXP": int(liab * 0.006),
+        "INTINC": int(asset * 0.03),
+    })  # fmt: skip
+    _ = rng
+    return [v[f] for f in ALM_FIELDS]
+
+
 def fdic_files(rng: np.random.Generator) -> dict[str, bytes]:
     out = {}
     rows = []
@@ -190,6 +250,14 @@ def fdic_files(rng: np.random.Generator) -> dict[str, bytes]:
                 break  # a failed bank stops filing
             rows.append(_bank_quarter(rng, cert, q, 1e8 * (1 + b) * (1 + 0.04 * i), stress))
     out["fdic/financials/case_study.csv"] = _csv(FINANCIAL_FIELDS, rows)
+    alm = [
+        _alm_row(
+            rng, 90001 + b, q, 1e8 * (1 + b), 1.0 if 90001 + b == FIXTURE_FAILED_CERT else 0.1 * b
+        )
+        for b in range(N_CASE_BANKS)
+        for q in ("20211231", "20221231")
+    ]
+    out["fdic/alm/case_study.csv"] = _csv(ALM_FIELDS, alm)
 
     rows = [
         _bank_quarter(

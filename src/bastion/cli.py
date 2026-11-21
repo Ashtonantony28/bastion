@@ -69,8 +69,11 @@ def _cmd_build(args: argparse.Namespace) -> int:
 
 
 def _cmd_report(args: argparse.Namespace) -> int:
-    from bastion.reports import ews, svb
+    from bastion.reports import alm, ews, svb
 
+    if args.name == "alm":
+        print("wrote", alm.build())
+        return 0
     note = ""
     if args.name in ("ews", "m7"):
         out, note = ews.build()
@@ -104,7 +107,9 @@ def main(argv: list[str] | None = None) -> int:
     pb.set_defaults(func=_cmd_build)
 
     pr = sub.add_parser("report", help="regenerate a results document under docs/results")
-    pr.add_argument("name", choices=["svb", "ews", "m7"], help="m7 = ews then svb (svb cites ews)")
+    pr.add_argument(
+        "name", choices=["svb", "ews", "m7", "alm"], help="m7 = ews then svb (svb cites ews)"
+    )
     pr.set_defaults(func=_cmd_report)
 
     args = p.parse_args(argv)

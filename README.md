@@ -8,7 +8,7 @@ analytics, a CCAR-style stress test, and an SR 11-7-style model risk management 
 > Research and portfolio project. Not a production risk system, not a regulatory submission,
 > not investment or credit advice. No real customer data is used.
 
-**Status:** M0 (data platform) and M7 (SVB case study, bank early-warning model) complete. See [docs/ROADMAP.md](docs/ROADMAP.md) and the full
+**Status:** M0 (data platform), M6 (ALM, IRRBB, liquidity) and M7 (SVB case study, bank early-warning model) complete. See [docs/ROADMAP.md](docs/ROADMAP.md) and the full
 [plan](docs/PLAN.md).
 
 ## Quick start
@@ -45,6 +45,17 @@ From the FDIC Call Report data the lakehouse builds, Silicon Valley Bank's unrea
 losses reached **104% of its Tier 1 capital at 2022-12-31**, with **86% of deposits uninsured**,
 the two facts at the heart of its March 2023 failure. See
 [docs/results/m0-data-platform.md](docs/results/m0-data-platform.md). The full case study is M7.
+
+## M6 highlights
+
+- **IRRBB from public data:** EVE under the six BCBS shocks and 12-month NII for every US bank,
+  from Call Report repricing buckets and a bootstrapped Treasury curve. On its 2021-12-31 balance
+  sheet, before any hike, SVB's worst EVE decline was 44% of Tier 1 (84% if uninsured deposits
+  are not treated as stable) against the 15% supervisory outlier threshold.
+- **Validated against what banks reported:** revaluing each bank's securities buckets under the
+  actual curve move predicts reported fair-value changes with correlation 0.6-0.7 across
+  1,300-1,500 banks in 2013 and 2022 (conservative by 2-3pp).
+  [Results](docs/results/m6-alm-liquidity.md).
 
 ## M7 highlights
 

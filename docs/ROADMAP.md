@@ -10,7 +10,7 @@ Full milestone definitions and Verify commands: [PLAN.md §6](PLAN.md).
 | M3 | IFRS 9 + CECL + IRB capital + portfolio credit VaR | |
 | M4 | Market risk (VaR, ES, sVaR, backtesting) | can start now (open data) |
 | M5 | Counterparty risk (EE/PFE, CVA, SA-CCR) | |
-| M6 | Liquidity, ALM, IRRBB | can start now (FDIC data) |
+| M6 | Liquidity, ALM, IRRBB | **done** ([results](results/m6-alm-liquidity.md), ADR 0007) |
 | M7 | SVB case study + bank early-warning model | **done** ([SVB](results/m7-svb-case-study.md), [EWS](results/m7-early-warning.md)) |
 | M8 | Stress testing | after M3 + M6 |
 | M9 | Fraud | needs Kaggle |

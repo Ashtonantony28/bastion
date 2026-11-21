@@ -47,6 +47,31 @@ INSTITUTION_FIELDS: list[str] = [
     "FED_RSSD", "RSSDHCR", "NAMEHCR",
 ]  # fmt: skip
 
+# ALM / IRRBB / liquidity fields (M6): Call Report repricing and maturity buckets
+# (RC-B Memo 2 securities, RC-C Memo 2 loans, RC-E Memo time deposits, RC-M borrowings),
+# deposit mix and HQLA proxies. Kept separate from FINANCIAL_FIELDS so existing pins stay valid.
+ALM_FIELDS: list[str] = [
+    "CERT", "REPDTE",
+    # securities by repricing / remaining maturity
+    "SCNM3LES", "SCNM3T12", "SCNM1T3", "SCNM3T5", "SCNM5T15", "SCNMOV15",
+    "SCPT3LES", "SCPT3T12", "SCPT1T3", "SCPT3T5", "SCPT5T15", "SCPTOV15",
+    "SCO3YLES", "SCOOV3Y",
+    # loans by repricing / remaining maturity
+    "LNRS3LES", "LNRS3T12", "LNRS1T3", "LNRS3T5", "LNRS5T15", "LNRSOV15",
+    "LNOT3LES", "LNOT3T12", "LNOT1T3", "LNOT3T5", "LNOT5T15", "LNOTOV15",
+    # time deposits by remaining maturity (<= and > $250k)
+    "CD3LESS", "CD3T12S", "CD1T3S", "CDOV3S", "CD3LES", "CD3T12", "CD1T3", "CDOV3",
+    # non-maturity deposit mix
+    "DEP", "DEPNI", "DEPI", "TRN", "NTRSMMDA", "NTRSOTH", "NTRTIME", "DEPINS", "DEPUNA", "BRO",
+    # borrowings by remaining maturity
+    "FREPP", "OTBFH1L", "OTBFH1T3", "OTBFH3T5", "OTBFHOV5", "OTBOT1L", "OTBOT1T3", "OTBOT3T5", "OTBOTOV5",
+    # liquidity and HQLA proxies
+    "ASSET", "LIAB", "EQTOT", "RBCT1J", "CHBAL", "SC", "SCUST", "SCGNM", "SCMUNI", "SCAF", "SCAA",
+    "SCHA", "SCHF", "SCPLEDGE", "LNPLEDGE", "LNLSGR", "LNRERES",
+    # funding cost (year-to-date)
+    "EDEP", "EINTEXP", "INTINC",
+]  # fmt: skip
+
 # SVB, Signature and First Republic plus large regional peers (see ADR 0006 and the M7 case study).
 CASE_STUDY_CERTS: dict[int, str] = {
     24735: "Silicon Valley Bank",
@@ -166,4 +191,28 @@ def financials_quarter_item(client: HttpClient, repdte: str) -> DownloadItem:
 
     return DownloadItem(
         f"fdic/financials/all_banks_{repdte}.csv", fetch, url=API + "financials?" + filters
+    )
+
+
+def alm_case_study_item(client: HttpClient) -> DownloadItem:
+    certs = " OR ".join(str(c) for c in sorted(CASE_STUDY_CERTS))
+    filters = f"CERT:({certs}) AND REPDTE:[{CASE_STUDY_FROM} TO {CASE_STUDY_TO}]"
+
+    def fetch() -> bytes:
+        return to_csv(
+            fetch_all(client, "financials", ALM_FIELDS, filters=filters), ALM_FIELDS, key=_fin_key
+        )
+
+    return DownloadItem("fdic/alm/case_study.csv", fetch, url=API + "financials?" + filters)
+
+
+def alm_quarter_item(client: HttpClient, repdte: str) -> DownloadItem:
+    filters = f"REPDTE:{repdte}"
+
+    def fetch() -> bytes:
+        rows = fetch_all(client, "financials", ALM_FIELDS, filters=filters, sort_by="CERT")
+        return to_csv(rows, ALM_FIELDS, key=_fin_key)
+
+    return DownloadItem(
+        f"fdic/alm/all_banks_{repdte}.csv", fetch, url=API + "financials?" + filters
     )

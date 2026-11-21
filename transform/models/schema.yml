@@ -46,3 +46,8 @@ models:
     columns:
       - name: cert
         tests: [unique, not_null]
+  - name: alm_position
+    description: ALM inputs per bank-quarter (repricing buckets, deposit mix, HQLA proxies), $000.
+    columns:
+      - name: cert
+        tests: [not_null]

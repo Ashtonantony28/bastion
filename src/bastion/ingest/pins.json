@@ -1,4 +1,29 @@
 {
+  "fdic/alm/all_banks_20121231.csv": {
+    "bytes": 2452314,
+    "sha256": "1575fefe3c8c47d3d96a827ddc711fc7548cdf133c212e897f256f038b68ca5d",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20121231"
+  },
+  "fdic/alm/all_banks_20131231.csv": {
+    "bytes": 2367879,
+    "sha256": "7621adb6b5ed21d1de46ee95363ffe22276a93e0c072b19e6a363d00cb06c6c0",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20131231"
+  },
+  "fdic/alm/all_banks_20211231.csv": {
+    "bytes": 1724328,
+    "sha256": "5cb7fee811d5b0d1d8591bd6f6b418f8823badfdaa14e10650919b507d6d373d",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20211231"
+  },
+  "fdic/alm/all_banks_20221231.csv": {
+    "bytes": 1696809,
+    "sha256": "1f5eaf37d77d8acf196b4eadc942fa3ef5a423abe0aca32b35e359d86cde1530",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20221231"
+  },
+  "fdic/alm/case_study.csv": {
+    "bytes": 105059,
+    "sha256": "66e2719345f934d0ce55e5b01e4200d40d1acb6cf7e7caec9f3511eba04176e8",
+    "url": "https://api.fdic.gov/banks/financials?CERT:(588 OR 983 OR 2270 OR 6560 OR 6672 OR 17534 OR 24045 OR 24735 OR 57053 OR 57512 OR 57957 OR 59017) AND REPDTE:[20191231 TO 20231231]"
+  },
   "fdic/failures.csv": {
     "bytes": 428363,
     "sha256": "04a1d550378a3a158e929a9e2106e08964ebb4a580abf18bc1d5ef31a4c19036",
