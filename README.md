@@ -8,7 +8,7 @@ analytics, a CCAR-style stress test, and an SR 11-7-style model risk management 
 > Research and portfolio project. Not a production risk system, not a regulatory submission,
 > not investment or credit advice. No real customer data is used.
 
-**Status:** M0 (data platform), M6 (ALM, IRRBB, liquidity) and M7 (SVB case study, bank early-warning model) complete. See [docs/ROADMAP.md](docs/ROADMAP.md) and the full
+**Status:** M0 (data platform), M4 (market risk), M6 (ALM, IRRBB, liquidity) and M7 (SVB case study, bank early-warning model) complete. See [docs/ROADMAP.md](docs/ROADMAP.md) and the full
 [plan](docs/PLAN.md).
 
 ## Quick start
@@ -45,6 +45,18 @@ From the FDIC Call Report data the lakehouse builds, Silicon Valley Bank's unrea
 losses reached **104% of its Tier 1 capital at 2022-12-31**, with **86% of deposits uninsured**,
 the two facts at the heart of its March 2023 failure. See
 [docs/results/m0-data-platform.md](docs/results/m0-data-platform.md). The full case study is M7.
+
+## M4 highlights
+
+Synthetic multi-asset trading book (equity baskets, Treasuries, a Baa corporate bond, FX forwards,
+index options) fully revalued on open daily data (Ken French, FRED, Treasury curves).
+
+- 1-day 99% VaR at 2025-12-31: HS $1.94m, filtered HS $1.70m, delta-normal $1.41m, Monte Carlo
+  Student-t $1.54m; stressed VaR (Jul 2008 to Jun 2009) $4.75m.
+- Backtest 2007 to 2025 (4,742 days, 47 exceptions expected): plain HS had 73 and fails both
+  Kupiec and Christoffersen; filtered HS had 35 and passes both. In 2008 HS was in the red zone
+  with 20 exceptions; FHS had 1.
+- Report: [docs/results/m4-market-risk.md](docs/results/m4-market-risk.md) (`make report-m4`).
 
 ## M6 highlights
 

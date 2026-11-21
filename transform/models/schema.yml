@@ -51,3 +51,13 @@ models:
     columns:
       - name: cert
         tests: [not_null]
+  - name: market_factor_daily
+    description: Daily market-risk factor returns and levels (M4).
+    columns:
+      - name: factor
+        tests: [not_null]
+      - name: kind
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["return", "level"]

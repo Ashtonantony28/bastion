@@ -319,10 +319,35 @@ def fdic_files(rng: np.random.Generator) -> dict[str, bytes]:
     return out
 
 
+FRENCH_INDUSTRIES = ["NoDur", "Durbl", "Manuf", "Enrgy", "Chems", "BusEq", "Telcm", "Utils", "Shops", "Hlth", "Money", "Other"]  # fmt: skip
+
+
+def french_files(rng: np.random.Generator) -> dict[str, bytes]:
+    days = [
+        d for d in (date(2021, 1, 4) + timedelta(days=i) for i in range(1100)) if d.weekday() < 5
+    ]
+    mkt = rng.standard_t(4, len(days)) * 0.7
+    fac = [
+        [d.strftime("%Y%m%d"), _f(m), _f(rng.normal(0, 0.4)), _f(rng.normal(0, 0.4)), "0.01"]
+        for d, m in zip(days, mkt, strict=True)
+    ]
+    ind = [
+        [
+            d.strftime("%Y%m%d"),
+            *[_f(m * rng.uniform(0.6, 1.4) + rng.normal(0, 0.5)) for _ in FRENCH_INDUSTRIES],
+        ]
+        for d, m in zip(days, mkt, strict=True)
+    ]
+    return {
+        "french/factors_daily.csv": _csv(["date", "Mkt-RF", "SMB", "HML", "RF"], fac),
+        "french/industry12_vw_daily.csv": _csv(["date", *FRENCH_INDUSTRIES], ind),
+    }
+
+
 def generate() -> dict[str, bytes]:
     rng = np.random.default_rng(SEED)
     files: dict[str, bytes] = {}
-    for gen in (fred_files, scenario_files, treasury_files, fdic_files):
+    for gen in (fred_files, scenario_files, treasury_files, fdic_files, french_files):
         files.update(gen(rng))
     return files
 

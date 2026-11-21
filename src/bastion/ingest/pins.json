@@ -449,10 +449,10 @@
     "sha256": "45c2859ae7246c071b69df8623854751f0629b04393957e14fe28bc33c04ebbb",
     "url": "https://www.federalreserve.gov/supervisionreg/files/2026_Final_Supervisory_Severely_Adverse_Domestic.csv"
   },
-  "fred/BAMLC0A4CBBB.csv": {
-    "bytes": 8978,
-    "sha256": "44df0f93ddff4f0d6fa45d626eb841685f3223087e43271f32e43d948a657174",
-    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLC0A4CBBB&cosd=1990-01-01&coed=2025-12-31"
+  "fred/BAA10Y.csv": {
+    "bytes": 148728,
+    "sha256": "7a769b84fd5233d9cbdda123b484354a3b61e0dfbd6e00719c19b03a6c83bfb2",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAA10Y&cosd=1990-01-01&coed=2025-12-31"
   },
   "fred/CORSFRMACBS.csv": {
     "bytes": 2285,
@@ -468,6 +468,26 @@
     "bytes": 8116,
     "sha256": "7a0449ee24199b6c74187a1500a8e160f81334bf707ddf15eabd20e9f0d37312",
     "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CSUSHPINSA&cosd=1990-01-01&coed=2025-12-31"
+  },
+  "fred/DEXCAUS.csv": {
+    "bytes": 166933,
+    "sha256": "4a41469e5e6eb73868c38b11d3fb05634819628c735289fd0057377b2ded39a9",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXCAUS&cosd=1990-01-01&coed=2025-12-31"
+  },
+  "fred/DEXJPUS.csv": {
+    "bytes": 165419,
+    "sha256": "a010394575e57ae0a4fe410e5975bdefc5a9bf79b88d442296d3f3dc21a09c85",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXJPUS&cosd=1990-01-01&coed=2025-12-31"
+  },
+  "fred/DEXUSEU.csv": {
+    "bytes": 125161,
+    "sha256": "882c3431d37aee37fd7fd8e17e1715be46b3529a51446f559978fed60cdc4f40",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSEU&cosd=1990-01-01&coed=2025-12-31"
+  },
+  "fred/DEXUSUK.csv": {
+    "bytes": 166933,
+    "sha256": "8f309c0d3f2aa4f6430860a2507c3937034e0ed7e63837a5d0200f545150612c",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXUSUK&cosd=1990-01-01&coed=2025-12-31"
   },
   "fred/DGS10.csv": {
     "bytes": 148747,
@@ -518,6 +538,16 @@
     "bytes": 158120,
     "sha256": "7987c310dbbdd6a039ffbca413b231dbcd40c82b6d2da836470b7613b0b2ab92",
     "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS&cosd=1990-01-01&coed=2025-12-31"
+  },
+  "french/factors_daily.csv": {
+    "bytes": 795601,
+    "sha256": "94b22a801bc3671b9ce81761812ad5cd154868ca7a219068daa91308a916aca7",
+    "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_daily_CSV.zip"
+  },
+  "french/industry12_vw_daily.csv": {
+    "bytes": 1949799,
+    "sha256": "9d4c59cda57b05276ba39b6df12fddf11f6c406964eff7279f8e0182f29361ce",
+    "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/12_Industry_Portfolios_Daily_CSV.zip"
   },
   "treasury/par_curve_2005.csv": {
     "bytes": 15326,

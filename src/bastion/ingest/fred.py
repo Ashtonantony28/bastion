@@ -25,11 +25,16 @@ SERIES: dict[str, str] = {
     "DGS5": "5-year Treasury constant maturity, %, daily",
     "DGS10": "10-year Treasury constant maturity, %, daily",
     "MORTGAGE30US": "30-year fixed mortgage average (Freddie Mac PMMS), %, weekly",
-    "BAMLC0A4CBBB": "ICE BofA BBB US corporate option-adjusted spread, %, daily",
+    "BAA10Y": "Moody's Baa corporate yield minus 10-year Treasury, %, daily",
     "VIXCLS": "CBOE VIX close, daily",
     "DRSFRMACBS": "Delinquency rate on single-family residential mortgages, all banks, %, quarterly SA",
     "CORSFRMACBS": "Charge-off rate on single-family residential mortgages, all banks, %, quarterly SA",
     "DRCCLACBS": "Delinquency rate on credit card loans, all banks, %, quarterly SA",
+    # market-risk factors (M4)
+    "DEXUSEU": "USD per EUR, noon buying rate, daily",
+    "DEXUSUK": "USD per GBP, noon buying rate, daily",
+    "DEXJPUS": "JPY per USD, noon buying rate, daily",
+    "DEXCAUS": "CAD per USD, noon buying rate, daily",
 }
 
 
