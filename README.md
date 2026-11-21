@@ -8,7 +8,7 @@ analytics, a CCAR-style stress test, and an SR 11-7-style model risk management 
 > Research and portfolio project. Not a production risk system, not a regulatory submission,
 > not investment or credit advice. No real customer data is used.
 
-**Status:** M0 (data platform) complete. See [docs/ROADMAP.md](docs/ROADMAP.md) and the full
+**Status:** M0 (data platform) and M7 (SVB case study, bank early-warning model) complete. See [docs/ROADMAP.md](docs/ROADMAP.md) and the full
 [plan](docs/PLAN.md).
 
 ## Quick start
@@ -45,3 +45,16 @@ From the FDIC Call Report data the lakehouse builds, Silicon Valley Bank's unrea
 losses reached **104% of its Tier 1 capital at 2022-12-31**, with **86% of deposits uninsured**,
 the two facts at the heart of its March 2023 failure. See
 [docs/results/m0-data-platform.md](docs/results/m0-data-platform.md). The full case study is M7.
+
+## M7 highlights
+
+- **SVB from public filings:** unrealized securities losses passed 50% of Tier 1 in 2022-Q1 and
+  100% by 2022-Q3; with securities marked to market its leverage ratio was below zero while the
+  reported ratio was 8.0%. [Case study](docs/results/m7-svb-case-study.md).
+- **Early-warning model** (logistic benchmark + monotone LightGBM, 514k bank-quarters 2005-2023):
+  out-of-time AUC 0.95-0.96 on banks that were still well capitalised in 2010-2012. Trained on
+  2006-2019 history, it ranks SVB mid-pack on its 2022-12-31 filing: a statistical model cannot
+  weight a failure mode it has barely seen, which is why Bastion pairs it with rate and liquidity
+  stress tests. [Results](docs/results/m7-early-warning.md).
+
+![SVB vs banks over $10bn](docs/results/figures/m7_svb_scatter_2022q4.png)

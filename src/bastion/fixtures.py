@@ -16,7 +16,7 @@ from pathlib import Path
 
 import numpy as np
 
-from bastion.ingest.fdic import FAILURE_FIELDS, FINANCIAL_FIELDS
+from bastion.ingest.fdic import FAILURE_FIELDS, FINANCIAL_FIELDS, INSTITUTION_FIELDS
 from bastion.ingest.fred import SERIES
 
 SEED = 20261119
@@ -222,6 +222,32 @@ def fdic_files(rng: np.random.Generator) -> dict[str, bytes]:
             ]
         )
     out["fdic/failures.csv"] = _csv(FAILURE_FIELDS, fails)
+
+    certs = (
+        [70001 + i for i in range(7)]
+        + [80001 + b for b in range(N_QUARTER_BANKS)]
+        + [90001 + b for b in range(N_CASE_BANKS)]
+    )
+    inst = []
+    for cert in sorted(certs):
+        failed = cert < 80000 or cert == FIXTURE_FAILED_CERT
+        inst.append(
+            [
+                cert,
+                f"Fixture Bank {cert}",
+                "ZZ",
+                0 if failed else 1,
+                "NM",
+                "01/01/1990",
+                "",
+                "01/01/1990",
+                "",
+                cert * 10,
+                "",
+                "",
+            ]
+        )
+    out["fdic/institutions.csv"] = _csv(INSTITUTION_FIELDS, inst)
     return out
 
 

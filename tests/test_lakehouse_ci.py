@@ -54,3 +54,17 @@ def test_treasury_tenor_union_by_name(warehouse):
 def test_macro_quarterly_has_all_fixture_series(warehouse):
     n = warehouse.execute("select count(distinct series_id) from macro_quarterly").fetchone()[0]
     assert n == len(fixtures.SERIES)
+
+
+def test_ews_label_marks_quarters_before_failure(warehouse):
+    rows = warehouse.execute(
+        "select repdte, fail_within_4q from ews_features where cert = ? order by repdte",
+        [fixtures.FIXTURE_FAILED_CERT],
+    ).fetchall()
+    labelled = [str(d) for d, f in rows if f]
+    # fails 2023-03-10: quarters ending 2022-03-31 .. 2022-12-31 are within four quarters
+    assert labelled == ["2022-03-31", "2022-06-30", "2022-09-30", "2022-12-31"]
+
+
+def test_bank_institution_names(warehouse):
+    assert warehouse.execute("select count(*) from bank_institution").fetchone()[0] > 0

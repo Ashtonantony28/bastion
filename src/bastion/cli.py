@@ -68,6 +68,18 @@ def _cmd_build(args: argparse.Namespace) -> int:
     return 0 if run_dbt(args.target, extra=args.dbt_args) else 1
 
 
+def _cmd_report(args: argparse.Namespace) -> int:
+    from bastion.reports import ews, svb
+
+    note = ""
+    if args.name in ("ews", "m7"):
+        out, note = ews.build()
+        print("wrote", out)
+    if args.name in ("svb", "m7"):
+        print("wrote", svb.build(ews_note=note))
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     p = argparse.ArgumentParser(prog="bastion")
@@ -90,6 +102,10 @@ def main(argv: list[str] | None = None) -> int:
     pb.add_argument("--target", choices=["ci", "dev"], default="dev")
     pb.add_argument("dbt_args", nargs=argparse.REMAINDER, help="extra args passed to dbt")
     pb.set_defaults(func=_cmd_build)
+
+    pr = sub.add_parser("report", help="regenerate a results document under docs/results")
+    pr.add_argument("name", choices=["svb", "ews", "m7"], help="m7 = ews then svb (svb cites ews)")
+    pr.set_defaults(func=_cmd_report)
 
     args = p.parse_args(argv)
     return int(args.func(args))

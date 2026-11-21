@@ -10,6 +10,8 @@ select
     f.asset, f.liab, f.eqtot, f.dep, f.depuna, f.depins,
     f.sc, f.scha, f.schf, f.scaf, f.scaa, f.lnlsgr, f.lnatres, f.chbal, f.asstlt,
     f.rbct1j, f.rwajt, f.netinc,
+    f.bro, f.coredep, f.voliab, f.nclnls, f.p3asset, f.p9asset, f.naasset, f.ntlnls,
+    f.lnre, f.lnci, f.lncon, f.intinc, f.eintexp, f.nonii, f.nonix, f.elnatr,
     f.depuna / nullif(f.dep, 0) as uninsured_deposit_share,
     f.schf - f.scha as htm_unrealized_gain_k,
     f.scaf - f.scaa as afs_unrealized_gain_k,

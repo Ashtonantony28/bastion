@@ -4,15 +4,395 @@
     "sha256": "04a1d550378a3a158e929a9e2106e08964ebb4a580abf18bc1d5ef31a4c19036",
     "url": "https://api.fdic.gov/banks/failures"
   },
+  "fdic/financials/all_banks_20050331.csv": {
+    "bytes": 2698852,
+    "sha256": "18f30c4ab821f78e6f9a1457a3643472e5a09f7b05afc6f8a4ec4782c2c19b3e",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20050331"
+  },
+  "fdic/financials/all_banks_20050630.csv": {
+    "bytes": 2699571,
+    "sha256": "5c21f72afcdd7983e4623f092c8827017a0df6443ebc406b9d3097e828b83805",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20050630"
+  },
+  "fdic/financials/all_banks_20050930.csv": {
+    "bytes": 2710054,
+    "sha256": "966d6a2ad54bc74c257eb44bd52317f6290e3bbfde08863a1b78c400efc1bf25",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20050930"
+  },
+  "fdic/financials/all_banks_20051231.csv": {
+    "bytes": 2710767,
+    "sha256": "a862a69cc4f1f6e12e53443fc7a61c069ce8e9d13ad4291d34ae01e79668fd28",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20051231"
+  },
+  "fdic/financials/all_banks_20060331.csv": {
+    "bytes": 2635828,
+    "sha256": "ad65656b3cbdcd56eac0f16e5cf25d808c3cec282e6f4ee00d889614d8b429e5",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20060331"
+  },
+  "fdic/financials/all_banks_20060630.csv": {
+    "bytes": 2652080,
+    "sha256": "63cbb9c7ff733c1b6fc22f965b1f8f12679d08ab7b686d74af0cab2f78adb2ea",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20060630"
+  },
+  "fdic/financials/all_banks_20060930.csv": {
+    "bytes": 2654270,
+    "sha256": "9eabc69d040de7278e38cc691cd05ddb23a94cd25660ce55c7c8d68ae72d5a3d",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20060930"
+  },
+  "fdic/financials/all_banks_20061231.csv": {
+    "bytes": 2642981,
+    "sha256": "e614300d8fbe245d95b9b54d263049a25fd50da854e4f66dc201924efeea14c3",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20061231"
+  },
+  "fdic/financials/all_banks_20070331.csv": {
+    "bytes": 2598954,
+    "sha256": "e13758f2e4ddd5e95a05e1977629c6cfd9dcbe80a226fb71c66401068879a31a",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20070331"
+  },
+  "fdic/financials/all_banks_20070630.csv": {
+    "bytes": 2609202,
+    "sha256": "e7822ed2a49bac4cae56ecf2c5ef041e86c9c462d11e431011dbfd3313b31813",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20070630"
+  },
+  "fdic/financials/all_banks_20070930.csv": {
+    "bytes": 2605613,
+    "sha256": "b6576be8fa2eec243cf7a29b4eceb6ff6d57819436ebb6d27f2a88c0c1cb7932",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20070930"
+  },
+  "fdic/financials/all_banks_20071231.csv": {
+    "bytes": 2609826,
+    "sha256": "4f81c726ca44bcbd5a5430b5abfbbbbc6baac2198f086bd1bce8a38e7145a26c",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20071231"
+  },
+  "fdic/financials/all_banks_20080331.csv": {
+    "bytes": 2567027,
+    "sha256": "472e7c93cd6ea24b30809e2c0fb7be80fcd93e1009d830985573598219e8a879",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20080331"
+  },
+  "fdic/financials/all_banks_20080630.csv": {
+    "bytes": 2578060,
+    "sha256": "7f65c5732aeb6f8f04bc9e21db560ca56ae69cc02dd02557840052cdc3afe409",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20080630"
+  },
+  "fdic/financials/all_banks_20080930.csv": {
+    "bytes": 2574514,
+    "sha256": "2e152d5b8327bdc1c2336b9a58f2ba4fbc0feafae73504fd427c36684c55ef29",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20080930"
+  },
+  "fdic/financials/all_banks_20081231.csv": {
+    "bytes": 2565869,
+    "sha256": "7f775957a5336a1469317ca78583e01fa0f3068cf7862909bd65d98419037ba2",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20081231"
+  },
+  "fdic/financials/all_banks_20090331.csv": {
+    "bytes": 2516470,
+    "sha256": "6bdecc7100cca77e1955c4517bed10621566a335c1587a15cd935c778dfeab16",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20090331"
+  },
+  "fdic/financials/all_banks_20090630.csv": {
+    "bytes": 2521826,
+    "sha256": "1098100f1b721c119332ed50527bb0db072b9c8e36abf2079fbec0f2d52c1b9e",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20090630"
+  },
+  "fdic/financials/all_banks_20090930.csv": {
+    "bytes": 2506611,
+    "sha256": "7d15fe4e821283604cfe763ff26de35272324168e2cf2c1151f9ab8f78ea82ff",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20090930"
+  },
+  "fdic/financials/all_banks_20091231.csv": {
+    "bytes": 2488478,
+    "sha256": "9143b4150b8b19eba4d9e2dc7acf4d2836f6b1979f7128fe4a156b5beb9f72b0",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20091231"
+  },
+  "fdic/financials/all_banks_20100331.csv": {
+    "bytes": 2421531,
+    "sha256": "0c4c5184bc30cb5949f52bb2848e7a936fb622d0accc2232752b2f76a6669a40",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20100331"
+  },
+  "fdic/financials/all_banks_20100630.csv": {
+    "bytes": 2407767,
+    "sha256": "0400de89b1fc7ff50b1841a946f4adfacbab96aca27f26917e4115fc6d731aae",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20100630"
+  },
+  "fdic/financials/all_banks_20100930.csv": {
+    "bytes": 2396353,
+    "sha256": "acff03741799c8235e2efa18a70bcffd1e67f7e3dea800e7edf8ec503a79adf3",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20100930"
+  },
+  "fdic/financials/all_banks_20101231.csv": {
+    "bytes": 2371906,
+    "sha256": "a987d01bece9e3ef398a4c0b4821d3353629d300025e0fe562cc4b6c3f930c4f",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20101231"
+  },
+  "fdic/financials/all_banks_20110331.csv": {
+    "bytes": 2309529,
+    "sha256": "73ee7e69db9b54348a86e992a471f8accfe5e83141cdfa4a5e809b15caa865bb",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20110331"
+  },
+  "fdic/financials/all_banks_20110630.csv": {
+    "bytes": 2307315,
+    "sha256": "3416328d8839e24998f7ab324c35482a9d9d294014ea55aa54b10d65a4279fe7",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20110630"
+  },
+  "fdic/financials/all_banks_20110930.csv": {
+    "bytes": 2293047,
+    "sha256": "93d9ba7c78467856dae961bb54f32c0c5a27c24037c69ef9f31a8264cb247de5",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20110930"
+  },
+  "fdic/financials/all_banks_20111231.csv": {
+    "bytes": 2276367,
+    "sha256": "29fa53dab5d1498abfe2456cb16a2cb844e3225446fd1e831f4e9a74230e5c40",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20111231"
+  },
+  "fdic/financials/all_banks_20120331.csv": {
+    "bytes": 2233821,
+    "sha256": "e0e7ecc1f754935a7d1bc6906ffec29751c31eff186fa67e15a2f69baab06e8a",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20120331"
+  },
+  "fdic/financials/all_banks_20120630.csv": {
+    "bytes": 2229267,
+    "sha256": "f26414b8c831b335f4e651c965614b07347a2cec3924bb9cf5c4f2bb8f183382",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20120630"
+  },
+  "fdic/financials/all_banks_20120930.csv": {
+    "bytes": 2219138,
+    "sha256": "642ffdc541a50dd9a6755aa7ff11b108b7d8fc09b524af70d259f4ccead73c4a",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20120930"
+  },
+  "fdic/financials/all_banks_20121231.csv": {
+    "bytes": 2196188,
+    "sha256": "2bbd95d5ced70dfd403852958c24652a29b65ac7ccb6344dc37e6915095e8bb0",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20121231"
+  },
+  "fdic/financials/all_banks_20130331.csv": {
+    "bytes": 2142908,
+    "sha256": "b2e869ad5ce9acaa01f6a1fbff685388239231458968b41606a5b2d8888b5396",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20130331"
+  },
+  "fdic/financials/all_banks_20130630.csv": {
+    "bytes": 2134307,
+    "sha256": "f5a18929e41eda0b309e4af12d2de3c1068dab91e681bd3dc96a900cc28cf755",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20130630"
+  },
+  "fdic/financials/all_banks_20130930.csv": {
+    "bytes": 2128688,
+    "sha256": "5274b24624b681c95bb9b740bab76318c8b03e688cafd6d5b2a96f2083d434c8",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20130930"
+  },
+  "fdic/financials/all_banks_20131231.csv": {
+    "bytes": 2111596,
+    "sha256": "9025c04f424c7d866e826368fbd81222efb717768f2f7e8476fc3a7db11adb41",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20131231"
+  },
+  "fdic/financials/all_banks_20140331.csv": {
+    "bytes": 2057407,
+    "sha256": "c0a59eb3f5fc7e99034189a8e69d21a1fa37624d9c384de2b8ffa46189cc4ab8",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20140331"
+  },
+  "fdic/financials/all_banks_20140630.csv": {
+    "bytes": 2051477,
+    "sha256": "a9b34f3795f8a77690df95c91572f619daef367d61a40cce8b1de841b8a2512c",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20140630"
+  },
+  "fdic/financials/all_banks_20140930.csv": {
+    "bytes": 2039607,
+    "sha256": "4f8c5662680610f0c2b607bf9842f552c679040fd1b42ed2f1c521c4a7a66e5e",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20140930"
+  },
+  "fdic/financials/all_banks_20141231.csv": {
+    "bytes": 2021306,
+    "sha256": "5e0422c8f5dd52c24f1240d1b438be0937a52d78039094ba6c4a63362077a60c",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20141231"
+  },
+  "fdic/financials/all_banks_20150331.csv": {
+    "bytes": 2072263,
+    "sha256": "8618be33dde09834513c2227d85c95b680fb12cce93e9161031395b91636eb87",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20150331"
+  },
+  "fdic/financials/all_banks_20150630.csv": {
+    "bytes": 2065339,
+    "sha256": "cde81ef746027d4c1121ce4e2e41f0a6fe1bf07560c10bf9696b086709195f76",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20150630"
+  },
+  "fdic/financials/all_banks_20150930.csv": {
+    "bytes": 2047920,
+    "sha256": "983a363d3058e2076a5b08f19d8577f6feef016d8cbaae19c3ff7adcdd5990d9",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20150930"
+  },
+  "fdic/financials/all_banks_20151231.csv": {
+    "bytes": 2026182,
+    "sha256": "aed7b852858683578e0672dd7083ade6f4f794d0fff2fbd8c5f415127dd73b28",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20151231"
+  },
+  "fdic/financials/all_banks_20160331.csv": {
+    "bytes": 1981171,
+    "sha256": "cea2fd05e261058c7bc19f567da2e7451fd3419a37e5348b86cb3bb777313ba8",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20160331"
+  },
+  "fdic/financials/all_banks_20160630.csv": {
+    "bytes": 1974893,
+    "sha256": "470e17a5be506c86f516c9576106f9bb013c62bbd3ffca5afe9d75982b17d79a",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20160630"
+  },
+  "fdic/financials/all_banks_20160930.csv": {
+    "bytes": 1957963,
+    "sha256": "cc9d1d410e03ed4954085b736706f6400637be7143de7b72b3f06678cda66dd3",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20160930"
+  },
+  "fdic/financials/all_banks_20161231.csv": {
+    "bytes": 1943350,
+    "sha256": "21856c2e60b5ae5595d5fe4f37538c16534037eb090d81b0977065e7dd9065f6",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20161231"
+  },
+  "fdic/financials/all_banks_20170331.csv": {
+    "bytes": 1896832,
+    "sha256": "06392adab9aaef4dd26c2740092c4b020cc8729671ebcff1b136f45a18490ccf",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20170331"
+  },
+  "fdic/financials/all_banks_20170630.csv": {
+    "bytes": 1888584,
+    "sha256": "73aca9d6bdabb56bff244e16a2c823979698f2b8b330f38c0fee4fc0ace67b9c",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20170630"
+  },
+  "fdic/financials/all_banks_20170930.csv": {
+    "bytes": 1880974,
+    "sha256": "b7539eaa8166d09a908ee7605975bf80311f445619a5fb98339b90b28926677e",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20170930"
+  },
+  "fdic/financials/all_banks_20171231.csv": {
+    "bytes": 1864667,
+    "sha256": "3c70c4643ced82ea96549530551c9c537db51595788d7f9d02d251c440868985",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20171231"
+  },
+  "fdic/financials/all_banks_20180331.csv": {
+    "bytes": 1820781,
+    "sha256": "c8e0f2ad180801fed744ea5577fe968a472be32270e3224da23528d4c66c6951",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20180331"
+  },
+  "fdic/financials/all_banks_20180630.csv": {
+    "bytes": 1812517,
+    "sha256": "6b5222f50891f37b72ceb30a3395a938bf6ff9fd3f7df4e809724ecf6f6107d2",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20180630"
+  },
+  "fdic/financials/all_banks_20180930.csv": {
+    "bytes": 1800267,
+    "sha256": "23a38c1fb8d80cff05143143c3a0f94c20f9b539372301d3b577e7097f02a42e",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20180930"
+  },
+  "fdic/financials/all_banks_20181231.csv": {
+    "bytes": 1783197,
+    "sha256": "15259e9edc62336669c16ce787cf7f7beee7d82885a78652fb297d4ffe7aa9cd",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20181231"
+  },
+  "fdic/financials/all_banks_20190331.csv": {
+    "bytes": 1746561,
+    "sha256": "db75cfd050510b20ef89edb9b4df45aef4e7fe31facfdb593706e9dabe229236",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20190331"
+  },
+  "fdic/financials/all_banks_20190630.csv": {
+    "bytes": 1738912,
+    "sha256": "47e362ba5b2d1b5d2f0ccbb8d3e8a07f703997b0fe879ecca9f30bdf45e50516",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20190630"
+  },
+  "fdic/financials/all_banks_20190930.csv": {
+    "bytes": 1735223,
+    "sha256": "cb27dcf1029cb3a28d85aafb943d04f7fece709d731837af642b5cb4e194c998",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20190930"
+  },
+  "fdic/financials/all_banks_20191231.csv": {
+    "bytes": 1713759,
+    "sha256": "67b8645e8fb92b875fba64567f2c995ac2819e95304de0efd71afe2dbabb67e2",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20191231"
+  },
+  "fdic/financials/all_banks_20200331.csv": {
+    "bytes": 1611333,
+    "sha256": "8bc46a44dfcd260a9be59130964d07f6866093a7b64af0eb638e729aed432365",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20200331"
+  },
+  "fdic/financials/all_banks_20200630.csv": {
+    "bytes": 1603555,
+    "sha256": "99283e85bf99ededc5d31d80ca6b4c7920d56ca6d6c6f49e4cb16c852f55c8fa",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20200630"
+  },
+  "fdic/financials/all_banks_20200930.csv": {
+    "bytes": 1596804,
+    "sha256": "d9b87d8a93aa036b40396b29ba598a419abc7749ebbeea181d619482a76cae17",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20200930"
+  },
+  "fdic/financials/all_banks_20201231.csv": {
+    "bytes": 1591050,
+    "sha256": "144fb7725553ce4ed7dc5a3fde2af1709716a2ff85ce93ce70c18589ef7a0d64",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20201231"
+  },
+  "fdic/financials/all_banks_20210331.csv": {
+    "bytes": 1563289,
+    "sha256": "eb1ab0e1e994214fbd57f019839e612fc4a3d1100922bbb92adb6dd1b3f98ccd",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20210331"
+  },
+  "fdic/financials/all_banks_20210630.csv": {
+    "bytes": 1566904,
+    "sha256": "a85f5ae206ae61fd7fd56a5f0fa2a3da701e3f845e6f16535a94574e8b1f3359",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20210630"
+  },
+  "fdic/financials/all_banks_20210930.csv": {
+    "bytes": 1563994,
+    "sha256": "613a9e696897b4ae5b9411ab0e562a1af73414daba28d60a73aa4a516baace58",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20210930"
+  },
+  "fdic/financials/all_banks_20211231.csv": {
+    "bytes": 1546199,
+    "sha256": "08d50f1b854b86c320ebd5adedeed1a10a8442b5249e1bd3d17b9fb05b9b6fa2",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20211231"
+  },
+  "fdic/financials/all_banks_20220331.csv": {
+    "bytes": 1515995,
+    "sha256": "2ba8fde4b403667874b2d0b12a6636b75ead9766ee061a43ec79dec50dbbfdd0",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20220331"
+  },
+  "fdic/financials/all_banks_20220630.csv": {
+    "bytes": 1521005,
+    "sha256": "fc16e279e5cabf69ae6d0fe07faf448bc23534213316822d0e3268b16bdd8aa7",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20220630"
+  },
+  "fdic/financials/all_banks_20220930.csv": {
+    "bytes": 1523897,
+    "sha256": "a9adec991664843758a1ba14ee5dfdba2f14bbf5c52f245d82c354063c436d0f",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20220930"
+  },
   "fdic/financials/all_banks_20221231.csv": {
     "bytes": 1518698,
     "sha256": "696a0e40a0177fef5b722e0eef7fdb5e4a38a4311eaea76301dc962046df02e8",
     "url": "https://api.fdic.gov/banks/financials?REPDTE:20221231"
   },
+  "fdic/financials/all_banks_20230331.csv": {
+    "bytes": 1491375,
+    "sha256": "6019bc78a443e50d3f8caf77913aff3337dfdccf759a4ae7a364efc1ff560c1d",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20230331"
+  },
+  "fdic/financials/all_banks_20230630.csv": {
+    "bytes": 1494410,
+    "sha256": "4c70713af09ef0b6693324bcf4459b05c7e04ff66946538eb8eca402942dab67",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20230630"
+  },
+  "fdic/financials/all_banks_20230930.csv": {
+    "bytes": 1492237,
+    "sha256": "7b1e4a04ad02d53cf21667648b7c2697869340dac8dfbf6a7700fcee1e857026",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20230930"
+  },
+  "fdic/financials/all_banks_20231231.csv": {
+    "bytes": 1490966,
+    "sha256": "04d855419f84f01cb36253822dbd413a904c576d172f695bd3ffab5f43b8f456",
+    "url": "https://api.fdic.gov/banks/financials?REPDTE:20231231"
+  },
   "fdic/financials/case_study.csv": {
     "bytes": 86772,
     "sha256": "1af07b4d0fd88945429c08b8172f2e2db4749d19079e085d7003dcf340f31590",
     "url": "https://api.fdic.gov/banks/financials?CERT:(588 OR 983 OR 2270 OR 6560 OR 6672 OR 17534 OR 24045 OR 24735 OR 57053 OR 57512 OR 57957 OR 59017) AND REPDTE:[20191231 TO 20231231]"
+  },
+  "fdic/institutions.csv": {
+    "bytes": 3010386,
+    "sha256": "af243bee4aae4f95d1fe6f6fd4f9ca71887e91017634f56fb4b6018dd996ce26",
+    "url": "https://api.fdic.gov/banks/institutions"
   },
   "fed_scenarios/2025/baseline_domestic.csv": {
     "bytes": 1750,
