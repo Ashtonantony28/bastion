@@ -1,0 +1,20 @@
+# Synthetic multi-asset trading book (USD). Positions are illustrative, chosen to exercise every
+# risk class: equity (French industry portfolios as tradeable baskets), rates (Treasuries),
+# credit (Baa corporate bond), FX forwards and non-linear equity index options.
+name: bastion-trading-book-v1
+positions:
+  - {type: equity, factor: equity_buseq, notional: 40000000}
+  - {type: equity, factor: equity_hlth, notional: 25000000}
+  - {type: equity, factor: equity_money, notional: 30000000}
+  - {type: equity, factor: equity_enrgy, notional: -15000000}
+  - {type: equity, factor: equity_utils, notional: 10000000}
+  - {type: bond, coupon: 0.040, maturity: 2.0, notional: 50000000}
+  - {type: bond, coupon: 0.040, maturity: 10.0, notional: 40000000}
+  - {type: bond, coupon: 0.045, maturity: 30.0, notional: -20000000}
+  - {type: corporate_bond, coupon: 0.055, maturity: 7.0, notional: 30000000}
+  - {type: fx_forward, factor: fx_eur, notional: 25000000}
+  - {type: fx_forward, factor: fx_jpy, notional: -20000000}
+  - {type: fx_forward, factor: fx_gbp, notional: 10000000}
+  # index options on the equity market: notional = underlying exposure at inception
+  - {type: option, kind: put, strike: 0.95, expiry: 0.25, notional: 60000000}
+  - {type: option, kind: call, strike: 1.05, expiry: 0.5, notional: -40000000}

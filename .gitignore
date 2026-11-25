@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+# Data is never committed (ADR 0004). Fixtures under fixtures/ are synthetic and committed.
+data/
+*.duckdb
+*.duckdb.wal
+transform/target/
+transform/logs/
+transform/dbt_packages/
+transform/.user.yml
+.dagster/

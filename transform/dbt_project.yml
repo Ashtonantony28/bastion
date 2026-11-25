@@ -1,0 +1,21 @@
+name: bastion
+version: "0.1.0"
+config-version: 2
+profile: bastion
+
+model-paths: ["models"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+target-path: "target"
+clean-targets: ["target"]
+
+vars:
+  # Root of raw files. `bastion build` sets it to $BASTION_DATA/raw (dev) or fixtures/raw (ci).
+  raw_root: "../fixtures/raw"
+
+models:
+  bastion:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

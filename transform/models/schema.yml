@@ -1,0 +1,63 @@
+version: 2
+
+models:
+  - name: stg_fred_observations
+    columns:
+      - name: series_id
+        tests: [not_null]
+      - name: obs_date
+        tests: [not_null]
+  - name: macro_quarterly
+    description: Quarterly average and last value per FRED series.
+    columns:
+      - name: quarter_end
+        tests: [not_null]
+  - name: scenario_paths
+    description: Fed supervisory scenarios, long form.
+    columns:
+      - name: scenario
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["historic", "baseline", "severely_adverse"]
+  - name: treasury_par_curve
+    columns:
+      - name: tenor_months
+        tests: [not_null]
+  - name: bank_failure
+    columns:
+      - name: cert
+        tests: [unique, not_null]
+  - name: bank_quarter
+    description: Conformed Call Report panel, thousands of USD.
+    columns:
+      - name: cert
+        tests: [not_null]
+      - name: repdte
+        tests: [not_null]
+  - name: ews_features
+    description: Early-warning features and 4-quarter-ahead failure label per bank-quarter.
+    columns:
+      - name: cert
+        tests: [not_null]
+      - name: fail_within_4q
+        tests: [not_null]
+  - name: bank_institution
+    columns:
+      - name: cert
+        tests: [unique, not_null]
+  - name: alm_position
+    description: ALM inputs per bank-quarter (repricing buckets, deposit mix, HQLA proxies), $000.
+    columns:
+      - name: cert
+        tests: [not_null]
+  - name: market_factor_daily
+    description: Daily market-risk factor returns and levels (M4).
+    columns:
+      - name: factor
+        tests: [not_null]
+      - name: kind
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["return", "level"]
