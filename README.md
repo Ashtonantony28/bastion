@@ -58,6 +58,8 @@ index options) fully revalued on open daily data (Ken French, FRED, Treasury cur
   with 20 exceptions; FHS had 1.
 - Report: [docs/results/m4-market-risk.md](docs/results/m4-market-risk.md) (`make report-m4`).
 
+![Daily P&L vs 99% VaR, 2007-2025: plain HS against filtered HS](docs/results/figures/m4_var_backtest.png)
+
 ## M5 highlights
 
 A five-swap netting set with a Baa-rated corporate is simulated under one-factor Hull-White fitted
@@ -70,6 +72,8 @@ to the 2025-12-31 Treasury curve.
   Jamshidian profile within MC error; SA-CCR reproduces BCBS 279 Example 1 (EAD 569).
 - Report: [docs/results/m5-counterparty-risk.md](docs/results/m5-counterparty-risk.md) (`make report-m5`).
 
+![Exposure profiles: gross, netted and collateralised](docs/results/figures/m5_exposure_profiles.png)
+
 ## M6 highlights
 
 - **IRRBB from public data:** EVE under the six BCBS shocks and 12-month NII for every US bank,
@@ -80,6 +84,8 @@ to the 2025-12-31 Treasury curve.
   actual curve move predicts reported fair-value changes with correlation 0.6-0.7 across
   1,300-1,500 banks in 2013 and 2022 (conservative by 2-3pp).
   [Results](docs/results/m6-alm-liquidity.md).
+
+![Model-predicted vs reported 2022 securities value change for 1,523 banks](docs/results/figures/m6_backtest_2022.png)
 
 ## M7 highlights
 
@@ -92,4 +98,8 @@ to the 2025-12-31 Treasury curve.
   weight a failure mode it has barely seen, which is why Bastion pairs it with rate and liquidity
   stress tests. [Results](docs/results/m7-early-warning.md).
 
-![SVB vs banks over $10bn](docs/results/figures/m7_svb_scatter_2022q4.png)
+| SVB vs every bank over $10bn, 2022-Q4 | Unrealized G/L as % of Tier 1, SVB vs peers | US bank failures by year |
+|---|---|---|
+| ![SVB vs banks over $10bn](docs/results/figures/m7_svb_scatter_2022q4.png) | ![SVB unrealized loss trend](docs/results/figures/m7_unrealized_trend.png) | ![Failures by year](docs/results/figures/m7_failures_by_year.png) |
+
+All figures are regenerated from public data by the `make report-m*` targets; the trading book and netting set are synthetic.
